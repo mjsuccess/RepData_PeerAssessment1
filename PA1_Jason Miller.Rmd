@@ -133,16 +133,3 @@ xyplot(ave_steps~interval|day_type,data=mtitot,layout=c(1,2),type="l")
   
 Keeping in mind that interval represents a real time during the day, we see that before 05:00 or interval 500, neither the weekend nore weekdays exibit much activity, but that the bulk of activity occurs between 05:00 (500) and just after 20:00 (2000). The most notable difference between the weekends and weekdays then, is a more evenly spread level of activity throughout this period. While the overall peek at 08:35 (835) seems to be, at least roughly, the most active time of day across both weekdays and weekends, it is far more extreme during the week. The above may also suggest that the weekend is overall more active, but further analysis of the mean, median and other measures would have to be considered before such a conclusion could be drawn.
 
-
-
-##Extra code not used
-#md = tapply(a$steps,a$date,mean,na.rm=T)
-#par(mar=c(7, 4, 3, 2) + 0.1,mfrow=c(1,1))
-#plot(md,type="l",lwd=2,col="red",xaxt="n",xlab=NA,ylab="Average number of steps",main="Average Daily Activity")
-
-#lablist = unique(a$date)
-#select = seq(1,61,by=5)
-#lablist = lablist[select]
-#lablist = format(lablist,"%d %b,%y")
-#axis(1, at=seq(1, 61, by=5), labels = FALSE)
-#text(seq(-2, 59, by=5),par("usr")[3]-17, labels = lablist, pos = 1, xpd = TRUE, srt = 75)
